@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lapor.in - Layanan Laporan Anonim</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>Lapor.in</h1>
+  <form id="report-form">
+    <textarea name="isi_laporan" placeholder="Tulis laporan..." required></textarea>
+    <select name="kategori" required>
+      <option value="">Pilih kategori</option>
+      <option value="bullying">Bullying</option>
+      <option value="fasilitas">Fasilitas</option>
+      <option value="guru">Guru</option>
+      <option value="lainnya">Lainnya</option>
+    </select>
+    <button type="submit">Kirim Laporan</button>
+  </form>
+  <div id="success-message" style="display:none;">
+    Laporan berhasil dikirim! Kode: <span id="report-code"></span>
+  </div>
+
+  <script type="module" src="firebase-config.js"></script>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
